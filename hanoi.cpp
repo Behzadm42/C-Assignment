@@ -6,12 +6,12 @@ void hanoi(int ,char,char,char);
 int main()
 {
     system("color 1c");
-    cout<<"\n\n\n\n\n\n\n\n\t\t\t\t(borjhaye hanoi)";
-    cout<<"\n\n\n\n\n\n\n\t\t\tpress any key to continue . . .";
+    cout<<"\n\n\n\n\n\n\n\n\t\t\t\t(Hanoi Tower)";
+    cout<<"\n\n\n\n\n\n\n\t\t\tPress any key to continue . . .";
     getch();
     system("cls"); 
     system("color 8e" );
-    cout<<"\n    pass = ";
+    cout<<"\n    Pass = ";
 	char password[4];
 	for(int i=0 ; i<4 ; i++)
 	{
@@ -24,19 +24,19 @@ int main()
     
     for(int i=0 ; i<4 ; i++)
           if(i=password[i]);
-            cout<<"\n\n\n\n\n\n\n\n\t\t\t\tpassword correct   ";
+            cout<<"\n\n\n\n\n\n\n\n\t\t\t\tPassword Correct   ";
 	getch();
 	system("cls");
     int n;
     char a,b,c;
     cout<<"\t\t\t"<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<char(15)<<endl;
-    cout<<"\n insert the page 1 = ";
+    cout<<"\n Insert the page 1 = ";
     cin>>a;
-    cout<<" insert the page 2 = ";
+    cout<<" Insert the page 2 = ";
     cin>>b;
-    cout<<" insert the page 3 = ";
+    cout<<" Insert the page 3 = ";
     cin>>c; 
-    cout<<" how many disk are on the <a> peg ? ";
+    cout<<" How many disk are on the <a> pege ? ";
     cin>>n;
     hanoi(n,a,b,c);
     
