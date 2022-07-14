@@ -46,11 +46,11 @@ int main()
 void hanoi(int n,char a,char b,char c)
 {
      if(n==1)
-             cout<<"\n\t mov disk "<<n<<" from page "<<a<<" to page "<<b;
+             cout<<"\n\t Mov disk "<<n<<" from page "<<a<<" to page "<<b;
      else
      {
          hanoi(n-1,a,c,b);
-          cout<<"\n\t mov disk "<<n<<" from page "<<a<<" to page "<<b;
+          cout<<"\n\t Mov disk "<<n<<" from page "<<a<<" to page "<<b;
          hanoi(n-1,c,b,a);
          }
 }                
