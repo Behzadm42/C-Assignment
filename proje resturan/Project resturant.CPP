@@ -1,0 +1,250 @@
+#include <iostream.h>
+#include <conio.h>
+#include <dos.h>
+#include <fstream.h>
+#include <stdlib.h>
+
+int getmenu(void);         //---namayeshe menu
+int getpizza(void);  		//---menu1
+int getcholo(void);			//---menu2
+int getsandvich(void);		//---menu3
+int getsalad(void);			//---menu4
+int getnoshidani(void);		//---menu5
+int tab(void);
+int profit(void);
+int tedad[18]={0};
+unsigned long int gheymat[18]={4500,3700,4200
+		,5200,5700,6100
+		,950,850,1100,1050
+		,500,250,400
+		,900,850,700,350};
+char ghaza[18][26]={"peperoni","gharcho & gosht","makhsus"
+		 ,"cholo morgh","cholo gosht","cholo mahi"
+		 ,"hotdog","Kalbas","Khorak","hamburger"
+		 ,"salad","mast","torshi"
+		 ,"noshabe","delster","dogh","Ab ma'dani"};
+
+unsigned long int sum=0;
+int i;
+int main()
+{clrscr();
+
+int ch;
+do
+	{ch=getmenu();
+	switch(ch)
+	{
+		case 1:do
+			{ch=getpizza();
+			 if (ch==4) break;
+			 if (ch>4) continue;
+			 cout<<"\n ----------------------";
+			 cout<<"\n - Che Tedad Mikhayd? ";
+			 cin>>i;
+			 switch(ch)
+		{
+		  case 1:tedad[0]+=i;
+			break;
+		  case 2:tedad[1]+=i;
+			break;
+		  case 3:tedad[2]+=i;
+			break;
+		  }
+			 }while (ch != 4);
+	break;
+		case 2:do
+			{ch=getcholo();
+			 if (ch==4) break;
+			 if (ch>4) continue;
+			 cout<<"\n ----------------------";
+			 cout<<"\n - Che Tedad Mikhayd? ";
+			 cin>>i;
+			 switch(ch)
+		{
+		  case 1:tedad[3]+=i;
+			break;
+		  case 2:tedad[4]+=i;
+			break;
+		  case 3:tedad[5]+=i;
+			break;
+		  }
+			 }while (ch != 4);
+	break;
+		case 3:do
+			{ch=getsandvich();
+			 if (ch==5) break;
+			 if (ch>5) continue;
+			 cout<<"\n ----------------------";
+			 cout<<"\n - Che Tedad Mikhayd? ";
+			 cin>>i;
+			 switch(ch)
+		{
+		  case 1:tedad[6]+=i;
+			break;
+		  case 2:tedad[7]+=i;
+			break;
+		  case 3:tedad[8]+=i;
+			break;
+		  case 4:tedad[9]+=i;
+			break;
+		  }
+			 }while (ch != 5);
+	break;
+		case 4:do
+			{ch=getsalad();
+			 if (ch==4) break;
+			 if (ch>4) continue;
+			 cout<<"\n ----------------------";
+			 cout<<"\n - Che Tedad Mikhayd? ";
+			 cin>>i;
+			 switch(ch)
+		{
+		  case 1:tedad[10]+=i;
+			break;
+		  case 2:tedad[11]+=i;
+			break;
+		  case 3:tedad[12]+=i;
+			break;
+		  }
+			 }while (ch != 4);
+	break;
+		case 5:do
+			{ch=getnoshidani();
+			 if (ch==5) break;
+			 if (ch>5) continue;
+			 cout<<"\n ----------------------";
+			 cout<<"\n - Che Tedad Mikhayd? ";
+			 cin>>i;
+			 switch(ch)
+		{
+		  case 1:tedad[13]+=i;
+			break;
+		  case 2:tedad[14]+=i;
+			break;
+		  case 3:tedad[15]+=i;
+			break;
+		  case 4:tedad[16]+=i;
+			break;
+		  }
+			 }while (ch != 5);
+	break;
+		case 6:tab();
+	break;
+		case 7:profit();
+	break;
+		}
+		}
+return 0;}
+//----------------show menu
+int getmenu(void)
+{clrscr();
+int num;
+cout<<"\n Welcome To My Resturant!\n";
+cout<<" ------------------------\n";
+cout<<" Please Select:\n";
+cout<<"\t\t1- Pizza\n";
+cout<<"\t\t2- cholo\n";
+cout<<"\t\t3- Sandvich\n";
+cout<<"\t\t4- Salad & ...\n";
+cout<<"\t\t5- noshidani\n";
+cout<<"\t\t6- Soorat Hesab\n";
+cout<<"\t\t7- Profit\n";
+cout<<"\t\t8- Exit\n";
+cout<<"- Chi Meyl Darid? ";
+cin>>num;
+return num;
+}
+//------------------getpizza--1
+int getpizza(void)
+{clrscr();
+int num;
+cout<<"\n Che Pitzayi Mikhorid?\n";
+cout<<" ------------------------\n";
+cout<<"\t1- "<<ghaza[0]<<"\n";
+cout<<"\t2- "<<ghaza[1]<<"\n";
+cout<<"\t3- "<<ghaza[2]<<"\n";
+cout<<"\t4- Return\n";
+cout<<"\n- Chi Meyl Darid? ";
+cin>>num;
+return num;
+}
+//-------------------getcholo--2
+int getcholo(void)
+{clrscr();
+int num;
+cout<<"\n Che Ghazayi Mikhorid?\n";
+cout<<" ------------------------\n";
+cout<<"\t1- "<<ghaza[3]<<"\n";
+cout<<"\t2- "<<ghaza[4]<<"\n";
+cout<<"\t3- "<<ghaza[5]<<"\n";
+cout<<"\t4- Return\n";
+cout<<"\n Chi Meyl Darid? ";
+cin>>num;
+return num;
+}
+//-------------------getsandvich--3
+int getsandvich(void)
+{clrscr();
+int num;
+cout<<"\n Che Sandevichi Mikhorid?\n";
+cout<<" ------------------------\n";
+cout<<"\t1- "<<ghaza[6]<<"\n";
+cout<<"\t2- "<<ghaza[7]<<"\n";
+cout<<"\t3- "<<ghaza[8]<<"\n";
+cout<<"\t4- "<<ghaza[9]<<"\n";
+cout<<"\t5- Return\n";
+cout<<"\n Chi Meyl Darid? ";
+cin>>num;
+return num;
+}
+//-------------------getsalad--4
+int getsalad(void)
+{clrscr();
+int num;
+cout<<"\n Salad ya Mast ham Mikhaied?\n";
+cout<<" ------------------------\n";
+cout<<"\t1- "<<ghaza[10]<<"\n";
+cout<<"\t2- "<<ghaza[11]<<"\n";
+cout<<"\t3- "<<ghaza[12]<<"\n";
+cout<<"\t4- Return\n";
+cout<<"\n Chi Meyl Darid? ";
+cin>>num;
+return num;
+}
+//-------------------getnoshidani--5
+int getnoshidani(void)
+{clrscr();
+int num;
+cout<<"\n Che Noshidaniyi Mikhorid?\n";
+cout<<" ------------------------\n";
+cout<<"\t1- "<<ghaza[13]<<"\n";
+cout<<"\t2- "<<ghaza[14]<<"\n";
+cout<<"\t3- "<<ghaza[15]<<"\n";
+cout<<"\t4- "<<ghaza[16]<<"\n";
+cout<<"\t5- Return\n";
+cout<<"\n Chi Meyl Darid? ";
+cin>>num;
+return num;
+}
+//-----------------------tab--6
+int tab(void)
+{unsigned long int sumgheymat=0;
+clrscr();
+for (int i=0;i<17;i++)
+	if (tedad[i]>0)
+	{cout<<"\n Shoma "<<tedad[i]<<" Addad "<<ghaza[i]
+	  <<" Dashtin Ke Mishe "<<tedad[i]*gheymat[i]<<"0 Riyal!";
+	sumgheymat+=tedad[i]*gheymat[i];
+	}
+cout<<"\n-------------------------";
+cout<<"\n Mablaghe Ghabele Pardakht= "<<sumgheymat<<"0 Rials Mibashad.!"<<"\nAz Kharid Shoma Motshakerim\nKeyfiyat Ramze Pishrafte Mast!";
+sum+=sumgheymat;
+getch();
+return 0;}
+
+int profit(void)
+{
+exit(1);
+getch();
+return 0;
+}
